@@ -1,10 +1,9 @@
 package com.example.SpringModel;
 
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.List;
+@Repository
+public interface EntityRepo extends CrudRepository<EntityRepoImpl,Integer> {
 
-public interface EntityRepo extends CrudRepository<SubEntity,Long> {
-
-    List<SubEntity> find(String subName);
 }
